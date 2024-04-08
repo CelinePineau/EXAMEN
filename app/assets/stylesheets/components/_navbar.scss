@@ -1,8 +1,9 @@
 .navbar-site {
   justify-content: space-between;
-  background: lightgray;
+  background: white;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid rgb(143, 143, 181);
 }
 
 .navbar-site .navbar-collapse {
