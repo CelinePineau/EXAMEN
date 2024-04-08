@@ -1,0 +1,9 @@
+<h2><%= @hotel.title %></h2>
+<p><%= @hotel.descrition %></p>
+<p><%= @hotel.price %> euros/nuit</p>
+<%= link_to "Delete",
+  hotel_path(@hotel),
+  data: {turbo_method: :delete, turbo_confirm: "Etes vous sûr ?"}
+%>
+
+<%= link_to "Retour à la liste des hôtels", hotels_path %>

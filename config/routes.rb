@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   get "about", to: "pages#about"
 
-  resources :hotels, only: %i[new create index show]
+  resources :hotels, only: %i[new create index show destroy]
 end

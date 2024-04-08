@@ -14,9 +14,15 @@ class HotelsController < ApplicationController
   def create
     @hotel = Hotel.new(hotel_params)
     @hotel.save
-    # No need for app/views/hotels/create.html.erb
     redirect_to hotel_path(@hotel)
   end
+
+  def destroy
+    @hotel = Hotel.find(params[:id])
+    @hotel.destroy
+    redirect_to hotels_path, status: :see_other
+  end
+
 
   private
 
